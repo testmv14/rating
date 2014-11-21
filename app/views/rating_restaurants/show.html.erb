@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @rating_restaurant.comments %>
+</p>
+
+<p>
+  <strong>Star:</strong>
+  <%= @rating_restaurant.star %>
+</p>
+
+<%= link_to 'Edit', edit_rating_restaurant_path(@rating_restaurant) %> |
+<%= link_to 'Back', rating_restaurants_path %>

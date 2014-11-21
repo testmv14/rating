@@ -1,0 +1,27 @@
+<h1>Listing rating_restaurants</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Comments</th>
+      <th>Star</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rating_restaurants.each do |rating_restaurant| %>
+      <tr>
+        <td><%= rating_restaurant.comments %></td>
+        <td><%= rating_restaurant.star %></td>
+        <td><%= link_to 'Show', rating_restaurant %></td>
+        <td><%= link_to 'Edit', edit_rating_restaurant_path(rating_restaurant) %></td>
+        <td><%= link_to 'Destroy', rating_restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rating restaurant', new_rating_restaurant_path %>
